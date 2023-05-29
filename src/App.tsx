@@ -1,8 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 
-const userList = [
+import "./App.css";
+import { Userlist } from "./Types/Types";
+import UserList from "./components/UserList";
+
+const userList: Userlist[] = [
   {
     id: 1,
     name: "Leanne Graham",
@@ -198,7 +200,7 @@ const userList = [
 function App() {
   return (
     <div className="App">
-      <h1> React assignment</h1>
+      <UserList userList={userList} />
     </div>
   );
 }
