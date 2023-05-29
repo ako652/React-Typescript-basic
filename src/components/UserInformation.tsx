@@ -5,7 +5,7 @@ type Prop = {
 };
 export default function UserInformation({ userItem }: Prop) {
   return (
-    <div style={{ border: "1px solid black", margin: "10px" }}>
+    <div style={{ border: "1px solid black", margin: "10px", textAlign:'center' }}>
       <p>
         <span>name: </span> {userItem.name}
       </p>
@@ -19,6 +19,7 @@ export default function UserInformation({ userItem }: Prop) {
         {userItem.phone}
       </p>
       <div>
+        address:
         {Object.entries(userItem.address).map(([key, value]) => (
           <ul key={key}>
             <li>
